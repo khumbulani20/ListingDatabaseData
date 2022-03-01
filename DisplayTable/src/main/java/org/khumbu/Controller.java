@@ -31,6 +31,9 @@ public class Controller extends HttpServlet {
 			 case "users":
 				 UserModel userModel= new UserModel();
 				 request.setAttribute("users", userModel.listUsers());
+				 
+				 //this will be used as title of users.jsp page
+				 request.setAttribute("title", "List of users");
 				 request.getRequestDispatcher("users.jsp").forward(request,response);
 				 break;
 				 default:
